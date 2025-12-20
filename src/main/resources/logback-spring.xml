@@ -17,8 +17,9 @@
 
     <!--  Appender to log to file (all)  -->
     <appender name="all" class="ch.qos.logback.core.rolling.RollingFileAppender">
-<!--        <file>/var/log/commit-tracker/all/</file> linux-->
-        <file>logs/all</file>
+<!--        <file>/var/log/commit-tracker/all/</file>-->
+        <!-- linux-->
+         <file>logs/all</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>log-all-%d{yyyy-MM-dd}.gz</fileNamePattern>
             <maxHistory>7</maxHistory>
@@ -31,7 +32,7 @@
 
     <!--  Appender to log to file (only status log)  -->
     <appender name="status" class="ch.qos.logback.core.rolling.RollingFileAppender">
-<!--        <file>/var/log/commit-tracker/status/</file> Linux-->
+<!--        <file>/var/log/commit-tracker/status/</file>-->
         <file>logs/status</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>log-status-%d{yyyy-MM-dd}.gz</fileNamePattern>
