@@ -20,4 +20,8 @@ public interface NotionSyncService {
 
     NotionSync convertMessage(GitlabWebhook gitlabWebhook);
 
+    Long countSyncedToNotionIsTrue();
+
+    Long countSyncedToNotionIsFalse();
+
 }
