@@ -11,6 +11,8 @@ import java.util.List;
 public interface CommitDao extends MongoRepository<NotionSync, String> {
     List<NotionSync> findBySyncedToNotionFalse();
 
+    List<NotionSync> findBySyncedToNotionTrue();
+
     @Aggregation(pipeline = {
             "{ '$match': {'syncedToNotion': true}}",
             "{'$count': 'status'}"

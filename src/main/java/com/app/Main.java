@@ -24,17 +24,18 @@ public class Main {
         return new RestTemplate();
     }
 
-//    @Bean
-//    public CommandLineRunner commandLineRunner(ApplicationContext ctx){
-//        return args -> {
-//            System.out.println("Inspect the beans had by the main class");
-//            String[] beanNames = ctx.getBeanDefinitionNames();
-//
-//            for (String bean: beanNames) {
-//                System.out.println(bean);
-//            }
-//        };
-//
-//    }
+    @Bean
+    public CommandLineRunner commandLineRunner(ApplicationContext context){
+        return args -> {
+            String[] beans = context.getBeanDefinitionNames();
+
+            for (String beanName: beans) {
+                System.out.println(beanName);
+            }
+
+        };
+
+
+    }
 
 }
